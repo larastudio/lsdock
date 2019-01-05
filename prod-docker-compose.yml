@@ -240,7 +240,7 @@ services:
         - ./data/certbot/certs/:/var/certs
         - ./certbot/letsencrypt/:/var/www/letsencrypt
       environment:
-        - CN="larastud.io"
+        - CN=larastud.io
         - EMAIL="jasperfrumau@gmail.com"
       networks:
         - frontend
