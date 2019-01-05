@@ -233,17 +233,17 @@ services:
     #     - backend
 
 ### Certbot #########################################
-    # certbot:
-    #   build:
-    #     context: ./certbot
-    #   volumes:
-    #     - ./data/certbot/certs/:/var/certs
-    #     - ./certbot/letsencrypt/:${APP_CODE_PATH_CONTAINER}/letsencrypt
-    #   environment:
-    #     - CN="fake.domain.com"
-    #     - EMAIL="fake.email@gmail.com"
-    #   networks:
-    #     - frontend
+    certbot:
+      build:
+        context: ./certbot
+      volumes:
+        - ./data/certbot/certs/:/var/certs
+        - ./certbot/letsencrypt/:${APP_CODE_PATH_CONTAINER}/letsencrypt
+      environment:
+        - CN="larastud.io"
+        - EMAIL="jasperfrumau@gmail.com"
+      networks:
+        - frontend
 
 ### Varnish ##########################################
     # proxy:
