@@ -241,7 +241,7 @@ services:
         - ./certbot/letsencrypt/:/var/www/letsencrypt
       environment:
         - CN=larastud.io
-        - EMAIL=jasper@larastud.io
+        - EMAIL=jasperfrumau@gmail.com
       networks:
         - frontend
 
