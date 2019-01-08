@@ -1,7 +1,7 @@
 server {
 
     listen 80;
-    server_name larastud.io
+    server_name larastud.io;
 
     root /var/www/public;
     index index.php index.html index.htm;
@@ -34,7 +34,6 @@ server {
 
 server {
 
-    listen 443 ssl default_server;
     listen [::]:443 ssl ssl http2;
     server_name larastud.io
 
