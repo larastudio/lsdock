@@ -11,9 +11,9 @@ volumes:
     driver: ${VOLUMES_DRIVER}
   mariadb:
     driver: ${VOLUMES_DRIVER}
-  certbot
+  certbot:
     driver: ${VOLUMES_DRIVER}
-  
+
 services:
 
 ### Workspace Utilities ##################################
