@@ -180,6 +180,8 @@ services:
         - ${NGINX_HOST_LOG_PATH}:/var/log/nginx
         - ${NGINX_SITES_PATH}:/etc/nginx/sites-available
         - ${NGINX_SSL_PATH}:/etc/nginx/ssl
+        - certbot-etc:/etc/letsencrypt
+        - certbot-var:/var/lib/letsencrypt
       ports:
         - "${NGINX_HOST_HTTP_PORT}:80"
         - "${NGINX_HOST_HTTPS_PORT}:443"
@@ -234,16 +236,15 @@ services:
 
 ### Certbot #########################################
     certbot:
-      build:
-        context: ./certbot
+      image: certbot/certbot
+      container_name: certbot
       volumes:
-        - ./data/certbot/certs/:/var/certs
-        - ./certbot/letsencrypt/:/var/www/letsencrypt
-      environment:
-        - CN=larastud.io
-        - EMAIL=jasperfrumau@gmail.com
-      networks:
-        - frontend
+        - certbot-etc:/etc/letsencrypt
+        - certbot-var:/var/lib/letsencrypt
+        - web-root:/var/www/html
+      depends_on:
+        - nginx
+      command: certonly --webroot --webroot-path=/var/www/public --email jasperfrumau@gmail.com --agree-tos --no-eff-email --staging -d larastud.io
 
 ### Varnish ##########################################
     # proxy:
