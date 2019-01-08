@@ -13,6 +13,12 @@ volumes:
     driver: ${VOLUMES_DRIVER}
   certbot-etc:
   certbot-var:
+  web-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/web/lslaravel/public/
+      o: bind
 
 services:
 
