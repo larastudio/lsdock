@@ -252,7 +252,7 @@ services:
         - web-root:/var/www/html
       depends_on:
         - nginx
-      command: certonly --webroot --webroot-path=/var/www/public --email jasperfrumau@gmail.com --agree-tos --no-eff-email --staging -d larastud.io
+      command: certonly --webroot --webroot-path=/var/www/html --email jasperfrumau@gmail.com --agree-tos --no-eff-email --staging -d larastud.io
 
 ### Varnish ##########################################
     # proxy:
