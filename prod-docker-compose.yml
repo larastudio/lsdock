@@ -11,8 +11,8 @@ volumes:
     driver: ${VOLUMES_DRIVER}
   mariadb:
     driver: ${VOLUMES_DRIVER}
-  certbot:
-    driver: ${VOLUMES_DRIVER}
+  certbot-etc:
+  certbot-var:
 
 services:
 
