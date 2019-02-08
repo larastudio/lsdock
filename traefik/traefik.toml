@@ -12,6 +12,7 @@ entrypoint = "webentry"
   #...
   # https://docs.traefik.io/configuration/api/#authentication
   # sudo apt-get install apache2-utils
+  # htpasswd -nb admin secure_password
   # [entrypoints.webentry]
   #   address = ":8080"
   #   [entrypoints.webentry.auth]
