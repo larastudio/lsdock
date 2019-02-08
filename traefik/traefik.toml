@@ -1,0 +1,35 @@
+debug = false
+
+logLevel = "ERROR"
+
+defaultEntryPoints = ["http", "https"]
+
+[api]
+dashboard = true
+entrypoint = "webentry"
+
+[entrypoints]
+  #...
+  # https://docs.traefik.io/configuration/api/#authentication
+  # [entrypoints.webentry]
+  #   address = ":8080"
+  #   [entrypoints.webentry.auth]
+  #     [entrypoints.webentry.auth.basic]
+  #       users = ["admin:key"]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
+
+
+[acme]
+email = "jasper@imwz.io"
+storage = "acme.json"
+entryPoint = "https"
+onHostRule = true
+onDemand = false
+[acme.httpChallenge]
+entryPoint = "http"
