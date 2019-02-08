@@ -26,10 +26,13 @@ entrypoint = "webentry"
 
 
 [acme]
-email = "jasper@imwz.io"
+email = "you@gmail.com"
 storage = "acme.json"
 entryPoint = "https"
 onHostRule = true
 onDemand = false
 [acme.httpChallenge]
 entryPoint = "http"
+[[acme.domains]]
+# main = "domain.com"
+# sub = "monitor.domain.com"

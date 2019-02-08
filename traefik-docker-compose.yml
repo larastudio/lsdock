@@ -199,6 +199,10 @@ services:
       networks:
         - frontend
         - backend
+      labels:
+        - traefik.backend=nginx
+        - traefik.frontend.rule=Host:example.org
+        - traefik.port=80
 
 ### MariaDB ##############################################
     mariadb:
