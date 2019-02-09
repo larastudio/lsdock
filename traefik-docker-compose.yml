@@ -144,6 +144,8 @@ services:
         - workspace
       networks:
         - backend
+      labels:
+        - traefik.enable=false
 
 ### PHP Worker ############################################
     php-worker:
@@ -165,6 +167,8 @@ services:
         - "dockerhost:${DOCKER_HOST_IP}"
       networks:
         - backend
+      labels:
+        - traefik.enable=false
 
 ### NGINX Server #########################################
     nginx:
