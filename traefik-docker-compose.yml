@@ -194,7 +194,7 @@ services:
         - backend
       labels:
         - traefik.backend=nginx
-        - traefik.frontend.rule=Host:larastud.io
+        - traefik.frontend.rule=Host:lara.studio
         - traefik.docker.network=frontend
         - traefik.port=80
 
@@ -247,6 +247,6 @@ services:
         - backend
       labels:
         - traefik.backend=traefik
-        - traefik.frontend.rule=Host:monitor.larastud.io
+        - traefik.frontend.rule=Host:monitor.lara.studio
         - traefik.port=8080
   
