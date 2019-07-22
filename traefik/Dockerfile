@@ -1,4 +1,4 @@
-FROM traefik:1.7.5-alpine
+FROM v2.0.0-beta1-alpine
 
 LABEL maintainer="Luis Coutinho <luis@luiscoutinho.pt>"
 
