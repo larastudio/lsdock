@@ -95,7 +95,7 @@ HOOK=/etc/dehydrated/dehydrated.hooks.sh
 #KEY_ALGO=rsa
 
 # E-mail to use during the registration (default: <unset>)
-CONTACT_EMAIL=you@example.com
+CONTACT_EMAIL=jasper@imagewize.com
 
 # Lockfile location, to prevent concurrent access (default: $BASEDIR/lock)
 #LOCKFILE="${BASEDIR}/lock"

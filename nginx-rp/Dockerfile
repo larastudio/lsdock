@@ -24,7 +24,7 @@ RUN apt-get install -y ca-certificates cron curl git python-setuptools
 # ---------------------------------------------------------
 WORKDIR /app/dehydrated
 RUN git clone -n https://github.com/lukas2511/dehydrated.git ./
-RUN git checkout c0bcf91
+RUN git checkout 0182549
 
 # ---------------------------------------------------------
 # Install python libraries:
