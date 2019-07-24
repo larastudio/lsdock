@@ -4,6 +4,13 @@ logLevel = "ERROR"
 
 defaultEntryPoints = ["http", "https"]
 
+[docker]
+  endpoint = "unix:///var/run/docker.sock"
+  domain = "docker.localhost"
+  watch = true
+  swarmMode = false
+  exposedByDefault = false
+
 [api]
 dashboard = true
 entrypoint = "webentry"
@@ -32,6 +39,7 @@ email = "you@gmail.com"
 storage = "acme.json"
 entryPoint = "https"
 onHostRule = true
+caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
 onDemand = false
 [acme.httpChallenge]
 entryPoint = "http"
